@@ -5,7 +5,7 @@ for i in range(1, 100):
         continue
     elif int(str(i)[::-1]) == i:
         if i < 11:
-            print('{:02d}'.format(i), end= ", ")
+            print('{:02d}'.format(i), end=", ")
         else:
             continue
     else:
