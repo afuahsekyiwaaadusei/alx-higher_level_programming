@@ -14,4 +14,4 @@ if __name__ == "__main__":
             if i == 0:
                 continue
             print(i, end=":")
-            print(" ", argv[i])
+            print(argv[i])
