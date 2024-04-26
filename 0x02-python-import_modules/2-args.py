@@ -7,7 +7,7 @@ if __name__ == "__main__":
         print(length - 1, "arguments.")
     elif length == 2:
         print(length - 1, "argument:")
-        print(length - 1, argv[length - 1])
+        print("1:", argv[length - 1])
     else:
         print(length - 1, "arguments:")
         for i in range(length):
