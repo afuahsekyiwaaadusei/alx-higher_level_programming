@@ -40,6 +40,5 @@ int is_palindrome(listint_t **head)
 		else
 			return (0);
 	}
-	printf("outside whille loop");
 	return (1);
 }
