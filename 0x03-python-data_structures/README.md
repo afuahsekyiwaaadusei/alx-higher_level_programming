@@ -233,4 +233,93 @@ Length: 22 - First character: A
 guillaume@ubuntu:~/0x03$ 
 
 9. Find the max
+Write a function that finds the biggest integer of a list.
+
+Prototype: def max_integer(my_list=[]):
+If the list is empty, return None
+You can assume that the list only contains integers
+You are not allowed to import any module
+You are not allowed to use the builtin max()
+
+guillaume@ubuntu:~/0x03$ cat 9-main.py
+#!/usr/bin/python3
+max_integer = __import__('9-max_integer').max_integer
+
+my_list = [1, 90, 2, 13, 34, 5, -13, 3]
+max_value = max_integer(my_list)
+print("Max: {}".format(max_value))
+
+guillaume@ubuntu:~/0x03$ ./9-main.py
+Max: 90
+guillaume@ubuntu:~/0x03$ 
+
+10. Only by 2
+Write a function that finds all multiples of 2 in a list.
+
+Prototype: def divisible_by_2(my_list=[]):
+Return a new list with True or False, depending on whether the integer at the same position in the original list is a multiple of 2
+The new list should have the same size as the original list
+You are not allowed to import any module
+
+guillaume@ubuntu:~/0x03$ cat 10-main.py
+#!/usr/bin/python3
+divisible_by_2 = __import__('10-divisible_by_2').divisible_by_2
+
+my_list = [0, 1, 2, 3, 4, 5, 6]
+list_result = divisible_by_2(my_list)
+
+i = 0
+while i < len(list_result):
+    print("{:d} {:s} divisible by 2".format(my_list[i], "is" if list_result[i] else "is not"))
+    i += 1
+
+guillaume@ubuntu:~/0x03$ ./10-main.py
+0 is divisible by 2
+1 is not divisible by 2
+2 is divisible by 2
+3 is not divisible by 2
+4 is divisible by 2
+5 is not divisible by 2
+6 is divisible by 2
+guillaume@ubuntu:~/0x03$ 
+
+
+11. Delete at
+Write a function that deletes the item at a specific position in a list.
+
+Prototype: def delete_at(my_list=[], idx=0):
+If idx is negative or out of range, nothing change (returns the same list)
+You are not allowed to use pop()
+You are not allowed to import any module
+
+guillaume@ubuntu:~/0x03$ cat 11-main.py
+#!/usr/bin/python3
+delete_at = __import__('11-delete_at').delete_at
+
+my_list = [1, 2, 3, 4, 5]
+idx = 3
+new_list = delete_at(my_list, idx)
+print(new_list)
+print(my_list)
+
+guillaume@ubuntu:~/0x03$ ./11-main.py
+[1, 2, 3, 5]
+[1, 2, 3, 5]
+guillaume@ubuntu:~/0x03$ 
+
+
+12. Switch
+Complete the source code in order to switch value of a and b
+
+You can find the source code here
+Your code should be inserted where the comment is (line 4)
+Your program should be exactly 5 lines long
+
+guillaume@ubuntu:~/py/0x03$ ./12-switch.py
+a=10 - b=89
+guillaume@ubuntu:~/py/0x03$ wc -l 12-switch.py
+5 12-switch.py
+guillaume@ubuntu:~/py/0x03$ 
+
+13. Linked list palindrome
 
