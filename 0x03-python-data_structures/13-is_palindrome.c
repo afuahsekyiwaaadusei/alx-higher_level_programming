@@ -20,25 +20,26 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		n++;
 	}
+	current = *head;
 	arr = malloc(sizeof(int) * n);
-	n = 0;
 	while (current != NULL)
 	{
-		current->n = arr[i];
+		arr[i] = current->n;
 		current = current->next;
-		n++, i++;
+		i++;
 	}
-	x = n;
+	x = n - 1;
+	current = *head;
 	while (current != NULL)
 	{
 		if (arr[j] == arr[x])
 		{
+			current = current->next;
 			j++, x--;
-			continue;
 		}
 		else
 			return (0);
 	}
+	printf("outside whille loop");
 	return (1);
-
 }
