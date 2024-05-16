@@ -4,7 +4,7 @@ def best_score(a_dictionary):
     '''Returns a key with the biggest integer value.
 
     If no score found, return None.'''
-    if a_dictionary == None or  a_dictionary == {}:
+    if a_dictionary is None or a_dictionary == {}:
         return None
     big_int = 0
     big_int_key = ''
