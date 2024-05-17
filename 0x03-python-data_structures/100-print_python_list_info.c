@@ -14,7 +14,7 @@ void print_python_list_info(PyObject *p)
 	struct _typeobject *type = Py_TYPE(p);
 	Py_ssize_t i;
 
-	printf("[*] Size of the Python List =  %zd\n", size);
+	printf("[*] Size of the Python List = %zd\n", size);
 	printf("[*] Allocated = %zd\n", allocated_slots);
 	for (i = 0; i < size; i++)
 	{
