@@ -29,7 +29,7 @@ void print_python_bytes(PyObject *p)
 		}
 		else
 		{
-			printf(" first 10 bytes: ");
+			printf("  first 6 bytes: ");
 			for (i = 0; i < 10; i++)
 				printf("%02x ", (unsigned char)byte_obj->ob_sval[i]);
 			printf("\n");
