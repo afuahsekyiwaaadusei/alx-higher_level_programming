@@ -23,13 +23,13 @@ void print_python_bytes(PyObject *p)
 		if (len <= 10)
 		{
 			printf("  first %zd bytes: ", len + 1);
-			for(i = 0; i <= len; i++)
+			for(i = 0; i < len; i++)
 				printf("%02x ", (unsigned char)byte_obj->ob_sval[i]);
-			printf("\n");
+			printf("%02x\n", (unsigned char)byte_obj->ob_sval[i]);
 		}
 		else
 		{
-			printf("  first 6 bytes: ");
+			printf("  first 10 bytes: ");
 			for (i = 0; i < 10; i++)
 				printf("%02x ", (unsigned char)byte_obj->ob_sval[i]);
 			printf("\n");
