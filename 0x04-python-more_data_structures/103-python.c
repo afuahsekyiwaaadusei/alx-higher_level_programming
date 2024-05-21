@@ -16,13 +16,13 @@ void print_python_bytes(PyObject *p)
 	if (PyBytes_Check(p))
 	{	PyBytes_AsStringAndSize(p, &buffer, &len);	
 		printf("[.] bytes object info\n");
-		printf(" size: %zd\n", len);
-		printf(" trying string: %s\n", buffer);
+		printf("  size: %zd\n", len);
+		printf("  trying string: %s\n", buffer);
 		obj = PyBytes_FromObject(p);
 		byte_obj = (PyBytesObject*)obj;
 		if (len <= 10)
 		{
-			printf(" first %zd bytes: ", len + 1);
+			printf("  first %zd bytes: ", len + 1);
 			for(i = 0; i <= len; i++)
 				printf("%02x ", (unsigned char)byte_obj->ob_sval[i]);
 			printf("\n");
