@@ -30,15 +30,15 @@ void print_python_bytes(PyObject *p)
 		else
 		{
 			printf("  first 10 bytes: ");
-			for (i = 0; i < 10; i++)
+			for (i = 0; i < 9; i++)
 				printf("%02x ", (unsigned char)byte_obj->ob_sval[i]);
-			printf("\n");
+			printf("%02x\n", (unsigned char)byte_obj->ob_sval[i]);
 		}
 	}
 	else
 	{
 		printf("[.] bytes object info\n");
-		printf(" [ERROR] Invalid Bytes Object\n");
+		printf("  [ERROR] Invalid Bytes Object\n");
 	}	
 }
 
